@@ -37,6 +37,7 @@
         font-size: 22px;
         padding-left: 35px;
         margin-bottom: 0;
+        width: 100%;
     }
 
     body{
@@ -75,33 +76,54 @@
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="about" placeholder={{about}} readonly></textarea>
         </div>
 
+        </div>
+
+        <h1>Work history</h1>
+
+        <div class="row">
+        <div class="col-6">
+            <input class="form-control" type="text" placeholder={{work_t}} readonly>
+        </div>
+
+        <div class="col-6">
+            <input class="form-control" type="text" placeholder={{emplo}} readonly>
+        </div>
+
+        <div class="col-6">
+            <input class="form-control" type="text" placeholder={{start}} readonly>
+        </div>
+
+        <div class="col-6">
+            <input class="form-control" type="text" placeholder={{end}} readonly>
+        </div>
+
 
         </div>
     </form>
-        <h1>Work history</h1>
 
 
-    <form action="/workhistory" method="post">
+
+    <form action="/education" method="post">
         <div class="row">
             <div class="col-6">
-              <input type="text" class="form-control" placeholder="Job title" name="work">
+              <input type="text" class="form-control" placeholder="Job title" name="work1">
             </div>
 
             <div class="col-6">
-                <input type="text" class="form-control" placeholder="Employer" name="employer">
+                <input type="text" class="form-control" placeholder="Employer" name="employer1">
             </div>
 
             <div class="col-6">
                 <label for="date">Start date</label>
-                <input id="date" type="text" class="form-control" placeholder="mm/dd/yyyy" name="work_start_date">
+                <input id="date" type="text" class="form-control" placeholder="mm/dd/yyyy" name="work_start_date1">
             </div>
 
             <div class="col-6">
                 <label for="date">End date</label>
-                <input id="date_end" type="text" class="form-control" placeholder="mm/dd/yyyy" name="work_end_date">
+                <input id="enddate" type="text" class="form-control" placeholder="mm/dd/yyyy" name="work_end_date1">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" name="work_present" id="work_present">
-                    <label class="form-check-label" for="work_present" name="check">
+                    <input class="form-check-input" type="checkbox" value="" name="work_present" id = "check">
+                    <label class="form-check-label" for="check" name="check">
                       I currently work here
                     </label>
                   </div>
@@ -109,12 +131,9 @@
         </div>
 
 
-        <div class="addbtn"><input type="submit" value="Add"></div>
+        <div class="addbtn"><input type="submit" value="Submit"></div>
       </form>
 
-      <form action="/education" method="post">
-        <div class="btn"><input type="submit" value="submit"></div>
-      </form>
 
 
 
